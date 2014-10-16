@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7407BF0519F02AAD00757F71 /* LectureDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407BF0419F02AAD00757F71 /* LectureDetailsViewController.swift */; };
+		7407BF0719F02D2500757F71 /* MUApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407BF0619F02D2500757F71 /* MUApi.swift */; };
+		7407BF0919F0305100757F71 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407BF0819F0305100757F71 /* Lecture.swift */; };
 		7496780119E6FC13002C77F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7496780019E6FC13002C77F8 /* AppDelegate.swift */; };
 		7496780319E6FC13002C77F8 /* LecturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7496780219E6FC13002C77F8 /* LecturesViewController.swift */; };
 		7496780619E6FC13002C77F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7496780419E6FC13002C77F8 /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7407BF0419F02AAD00757F71 /* LectureDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureDetailsViewController.swift; path = Controllers/LectureDetailsViewController.swift; sourceTree = "<group>"; };
+		7407BF0619F02D2500757F71 /* MUApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUApi.swift; path = Model/MUApi.swift; sourceTree = "<group>"; };
+		7407BF0819F0305100757F71 /* Lecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lecture.swift; path = Model/Lecture.swift; sourceTree = "<group>"; };
 		749677FB19E6FC13002C77F8 /* MUWeekly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MUWeekly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		749677FF19E6FC13002C77F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7496780019E6FC13002C77F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +126,8 @@
 		74FEA1B819EC43DB007B54AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7407BF0619F02D2500757F71 /* MUApi.swift */,
+				7407BF0819F0305100757F71 /* Lecture.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -129,6 +137,7 @@
 			children = (
 				7496780219E6FC13002C77F8 /* LecturesViewController.swift */,
 				74FEA1BB19EC4449007B54AD /* LoginViewController.swift */,
+				7407BF0419F02AAD00757F71 /* LectureDetailsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -245,6 +254,9 @@
 			files = (
 				74FEA1BC19EC4449007B54AD /* LoginViewController.swift in Sources */,
 				7496780319E6FC13002C77F8 /* LecturesViewController.swift in Sources */,
+				7407BF0919F0305100757F71 /* Lecture.swift in Sources */,
+				7407BF0519F02AAD00757F71 /* LectureDetailsViewController.swift in Sources */,
+				7407BF0719F02D2500757F71 /* MUApi.swift in Sources */,
 				7496780119E6FC13002C77F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

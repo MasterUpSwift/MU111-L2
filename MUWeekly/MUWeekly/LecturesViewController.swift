@@ -9,21 +9,37 @@
 import UIKit
 
 class LecturesViewController: UITableViewController {
+    var lecturesList: [Lecture] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //if user.loggedIn != true {
-        //показываем авторизацию
-        
-        let navAuthentication: UINavigationController = UIStoryboard(name: "Authentication", bundle: nil).instantiateInitialViewController() as UINavigationController
-        
-        navigationController?.presentViewController(navAuthentication, animated: true, completion: nil)
-        
+        MUApi.sharedInstance().getLectures { (lectures) -> () in
+
+            self.lecturesList = lectures
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lecturesList.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier("lectureCell", forIndexPath: indexPath) as UITableViewCell
+        
+        
+        var lecture = lecturesList[indexPath.row]
+        cell.textLabel?.text = lecture.name
+        
+        
+        
+        return cell
     }
     
     
