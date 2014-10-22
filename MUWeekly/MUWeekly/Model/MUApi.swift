@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 var instance: MUApi?
 
@@ -25,7 +27,35 @@ class MUApi: NSObject {
         return StaticHelper.instance!
     }
     
+    private func parseLectures(lecturesArray: NSArray) -> [Lecture] {
+        
+        var resultLectures: [Lecture] = []
+        
+        for lectureItem in lecturesArray {
+            if let lectureName = lectureItem["name"] as? String {
+                var resultLecture = Lecture()
+                resultLecture.name = lectureName
+                
+                if let details = lectureItem["description"] as? String {
+                    resultLecture.details = details
+                }
+                
+                resultLectures += [resultLecture]
+            }
+        }
+        
+    
+        return resultLectures
+        
+    }
+    
     func getLectures(success:([Lecture])->()) {
+        
+        Alamofire.request(.GET, "http://weekly.master-up.net/api/mu/lectures/").responseJSON { (_, _, json, error) -> Void in
+            success(self.parseLectures(json as NSArray))
+        }
+        
+        /* вариант с использованием NSURLSession
         //качаем
         
         var request = NSMutableURLRequest(URL: NSURL(string: "http://weekly.master-up.net/api/mu/lectures/"))
@@ -35,30 +65,22 @@ class MUApi: NSObject {
         
         var task = session.dataTaskWithRequest(request, completionHandler: { (data, _, error) -> Void in
             
+            //парсим наши данные не в освновном потоке
             var error: NSError?
             
             var json: AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableLeaves, error: &error)
             
             
-            var resultLectures: [Lecture] = []
-            
-            if let lecturesArray = json as? NSArray{
-                
-                for lectureItem in lecturesArray {
-                    if let lectureName = lectureItem["name"] as? String {
-                        var resultLecture = Lecture()
-                        resultLecture.name = lectureName
-                        
-                        resultLectures += [resultLecture]
-
-                    }
-                    
-                }
-            }
         
-            success(resultLectures)
+            if let lecturesArray = json as? NSArray{
+        
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                success(resultLectures)
+            })
+
         })
         
         task.resume()
+*/
     }
 }

@@ -16,11 +16,34 @@
 		7496780819E6FC13002C77F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7496780719E6FC13002C77F8 /* Images.xcassets */; };
 		7496780B19E6FC13002C77F8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7496780919E6FC13002C77F8 /* LaunchScreen.xib */; };
 		7496781719E6FC13002C77F8 /* MUWeeklyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7496781619E6FC13002C77F8 /* MUWeeklyTests.swift */; };
+		74D09E9719F576AA00A2493E /* TestTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D09E9619F576AA00A2493E /* TestTableCellTableViewCell.m */; };
+		74D09E9A19F57AF100A2493E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D09E9919F57AF100A2493E /* MBProgressHUD.m */; };
 		74FEA1B719EC3EA2007B54AD /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74FEA1B619EC3EA2007B54AD /* Authentication.storyboard */; };
 		74FEA1BC19EC4449007B54AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FEA1BB19EC4449007B54AD /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		748FDB5D19F57D9C008D9B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 748FDB5819F57D9C008D9B0A /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		748FDB5F19F57D9C008D9B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 748FDB5819F57D9C008D9B0A /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		748FDB6119F57DA4008D9B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 748FDB5819F57D9C008D9B0A /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 		7496781119E6FC13002C77F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 749677F319E6FC13002C77F8 /* Project object */;
@@ -34,6 +57,7 @@
 		7407BF0419F02AAD00757F71 /* LectureDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LectureDetailsViewController.swift; path = Controllers/LectureDetailsViewController.swift; sourceTree = "<group>"; };
 		7407BF0619F02D2500757F71 /* MUApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUApi.swift; path = Model/MUApi.swift; sourceTree = "<group>"; };
 		7407BF0819F0305100757F71 /* Lecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lecture.swift; path = Model/Lecture.swift; sourceTree = "<group>"; };
+		748FDB5819F57D9C008D9B0A /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../../../Downloads/Alamofire-master-4/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		749677FB19E6FC13002C77F8 /* MUWeekly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MUWeekly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		749677FF19E6FC13002C77F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7496780019E6FC13002C77F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +68,11 @@
 		7496781019E6FC13002C77F8 /* MUWeeklyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MUWeeklyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7496781519E6FC13002C77F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7496781619E6FC13002C77F8 /* MUWeeklyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUWeeklyTests.swift; sourceTree = "<group>"; };
+		74D09E9419F576AA00A2493E /* MUWeekly-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MUWeekly-Bridging-Header.h"; sourceTree = "<group>"; };
+		74D09E9519F576AA00A2493E /* TestTableCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestTableCellTableViewCell.h; path = Test/TestTableCellTableViewCell.h; sourceTree = "<group>"; };
+		74D09E9619F576AA00A2493E /* TestTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestTableCellTableViewCell.m; path = Test/TestTableCellTableViewCell.m; sourceTree = "<group>"; };
+		74D09E9819F57AF100A2493E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		74D09E9919F57AF100A2493E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		74FEA1B619EC3EA2007B54AD /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		74FEA1BB19EC4449007B54AD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,9 +95,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		748FDB5919F57D9C008D9B0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				748FDB5E19F57D9C008D9B0A /* Alamofire.framework */,
+				748FDB6019F57D9C008D9B0A /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		749677F219E6FC13002C77F8 = {
 			isa = PBXGroup;
 			children = (
+				748FDB5819F57D9C008D9B0A /* Alamofire.xcodeproj */,
 				749677FD19E6FC13002C77F8 /* MUWeekly */,
 				7496781319E6FC13002C77F8 /* MUWeeklyTests */,
 				749677FC19E6FC13002C77F8 /* Products */,
@@ -87,6 +126,7 @@
 		749677FD19E6FC13002C77F8 /* MUWeekly */ = {
 			isa = PBXGroup;
 			children = (
+				74D09E9319F5767300A2493E /* Test */,
 				74FEA1BA19EC43FD007B54AD /* UI */,
 				74FEA1B919EC43E7007B54AD /* Controller */,
 				74FEA1B819EC43DB007B54AD /* Model */,
@@ -121,6 +161,18 @@
 				7496781519E6FC13002C77F8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74D09E9319F5767300A2493E /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				74D09E9819F57AF100A2493E /* MBProgressHUD.h */,
+				74D09E9919F57AF100A2493E /* MBProgressHUD.m */,
+				74D09E9519F576AA00A2493E /* TestTableCellTableViewCell.h */,
+				74D09E9619F576AA00A2493E /* TestTableCellTableViewCell.m */,
+				74D09E9419F576AA00A2493E /* MUWeekly-Bridging-Header.h */,
+			);
+			name = Test;
 			sourceTree = "<group>";
 		};
 		74FEA1B819EC43DB007B54AD /* Model */ = {
@@ -165,6 +217,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				748FDB6219F57DA4008D9B0A /* PBXTargetDependency */,
 			);
 			name = MUWeekly;
 			productName = MUWeekly;
@@ -218,6 +271,12 @@
 			mainGroup = 749677F219E6FC13002C77F8;
 			productRefGroup = 749677FC19E6FC13002C77F8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 748FDB5919F57D9C008D9B0A /* Products */;
+					ProjectRef = 748FDB5819F57D9C008D9B0A /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				749677FA19E6FC13002C77F8 /* MUWeekly */,
@@ -225,6 +284,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		748FDB5E19F57D9C008D9B0A /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 748FDB5D19F57D9C008D9B0A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		748FDB6019F57D9C008D9B0A /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 748FDB5F19F57D9C008D9B0A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		749677F919E6FC13002C77F8 /* Resources */ = {
@@ -258,6 +334,8 @@
 				7407BF0519F02AAD00757F71 /* LectureDetailsViewController.swift in Sources */,
 				7407BF0719F02D2500757F71 /* MUApi.swift in Sources */,
 				7496780119E6FC13002C77F8 /* AppDelegate.swift in Sources */,
+				74D09E9719F576AA00A2493E /* TestTableCellTableViewCell.m in Sources */,
+				74D09E9A19F57AF100A2493E /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +350,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		748FDB6219F57DA4008D9B0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = 748FDB6119F57DA4008D9B0A /* PBXContainerItemProxy */;
+		};
 		7496781219E6FC13002C77F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 749677FA19E6FC13002C77F8 /* MUWeekly */;
@@ -380,10 +463,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MUWeekly/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MUWeekly/MUWeekly-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -391,10 +477,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MUWeekly/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MUWeekly/MUWeekly-Bridging-Header.h";
 			};
 			name = Release;
 		};

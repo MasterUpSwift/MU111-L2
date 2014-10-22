@@ -14,8 +14,12 @@ class LecturesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        MBProgressHUD.showHUDAddedTo(view, animated: true)
+        
         MUApi.sharedInstance().getLectures { (lectures) -> () in
 
+            MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+            
             self.lecturesList = lectures
             self.tableView.reloadData()
         }
@@ -31,17 +35,25 @@ class LecturesViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("lectureCell", forIndexPath: indexPath) as UITableViewCell
-        
+        var cell = tableView.dequeueReusableCellWithIdentifier("lectureCell", forIndexPath: indexPath) as TestTableCell
         
         var lecture = lecturesList[indexPath.row]
         cell.textLabel?.text = lecture.name
-        
-        
-        
+
         return cell
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "lectureDetails" {
+           let detailsViewController = segue.destinationViewController as LectureDetailsViewController
+
+            
+            let indexPath = self.tableView.indexPathForCell(sender as TestTableCell)!
+            
+            let lecture = lecturesList[indexPath.row]
+            
+            detailsViewController.lecture = lecture
+        }
+    }
 }
 
